@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Default test</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>1/0/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>0/0/1</td>
 </tr><tr>
-<td>Started on:</td><td>Thu Aug 08 11:42:14 IST 2019</td>
+<td>Started on:</td><td>Fri Aug 09 10:34:59 IST 2019</td>
 </tr>
-<tr><td>Total time:</td><td>31 seconds (31165 ms)</td>
+<tr><td>Total time:</td><td>0 seconds (869 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -67,17 +67,126 @@ function toggleAllBoxes() {
 </tr>
 </table><p/>
 <small><i>(Hover the method name to see the test class name)</i></small><p/>
-<table width='100%' border='1' class='invocation-passed'>
-<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED CONFIGURATIONS</b></td></tr>
 <tr><td><b>Test method</b></td>
 <td width="30%"><b>Exception</b></td>
 <td width="10%"><b>Time (seconds)</b></td>
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='Cucumber.RunnerClass.feature()'><b>feature</b><br>Test class: Cucumber.RunnerClass<br>Test method: Runs Cucumber Feature<br>Parameters: Login Functionality</td>
+<td title='Cucumber.RunnerClass.setUpClass()'><b>setUpClass</b><br>Test class: Cucumber.RunnerClass</td>
+<td><div><pre>cucumber.runtime.DuplicateStepDefinitionException: Duplicate step definitions in Cucumber.CaseStudyStepDefinition.navigateToHomePage() in file:/C:/TestMeApp/Cucumber/target/classes/ and Cucumber.LoginFeatureStepdefinition.navigateToHomePage() in file:/C:/TestMeApp/Cucumber/target/classes/
+	at cucumber.runtime.RuntimeGlue.addStepDefinition(RuntimeGlue.java:33)
+	at cucumber.runtime.java.JavaBackend.addStepDefinition(JavaBackend.java:117)
+	at cucumber.runtime.java.MethodScanner.scan(MethodScanner.java:68)
+	at cucumber.runtime.java.MethodScanner.scan(MethodScanner.java:41)
+	at cucumber.runtime.java.JavaBackend.loadGlue(JavaBackend.java:78)
+	at cucumber.runtime.Runtime.&lt;init&gt;(Runtime.java:91)
+	at cucumber.runtime.Runtime.&lt;init&gt;(Runtime.java:69)
+	at cucumber.runtime.Runtime.&lt;init&gt;(Runtime.java:65)
+	at cucumber.api.testng.TestNGCucumberRunner.&lt;init&gt;(TestNGCucumberRunner.java:42)
+	at cucumber.api.testng.AbstractTestNGCucumberTests.setUpClass(AbstractTestNGCucumberTests.java:16)
+... Removed 24 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1222768327", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1222768327'><pre>cucumber.runtime.DuplicateStepDefinitionException: Duplicate step definitions in Cucumber.CaseStudyStepDefinition.navigateToHomePage() in file:/C:/TestMeApp/Cucumber/target/classes/ and Cucumber.LoginFeatureStepdefinition.navigateToHomePage() in file:/C:/TestMeApp/Cucumber/target/classes/
+	at cucumber.runtime.RuntimeGlue.addStepDefinition(RuntimeGlue.java:33)
+	at cucumber.runtime.java.JavaBackend.addStepDefinition(JavaBackend.java:117)
+	at cucumber.runtime.java.MethodScanner.scan(MethodScanner.java:68)
+	at cucumber.runtime.java.MethodScanner.scan(MethodScanner.java:41)
+	at cucumber.runtime.java.JavaBackend.loadGlue(JavaBackend.java:78)
+	at cucumber.runtime.Runtime.&lt;init&gt;(Runtime.java:91)
+	at cucumber.runtime.Runtime.&lt;init&gt;(Runtime.java:69)
+	at cucumber.runtime.Runtime.&lt;init&gt;(Runtime.java:65)
+	at cucumber.api.testng.TestNGCucumberRunner.&lt;init&gt;(TestNGCucumberRunner.java:42)
+	at cucumber.api.testng.AbstractTestNGCucumberTests.setUpClass(AbstractTestNGCucumberTests.java:16)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:85)
+	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:517)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:213)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:140)
+	at org.testng.internal.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:170)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:104)
+	at org.testng.TestRunner.privateRun(TestRunner.java:771)
+	at org.testng.TestRunner.run(TestRunner.java:621)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:357)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:352)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:310)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:259)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1199)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1124)
+	at org.testng.TestNG.run(TestNG.java:1032)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:126)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:152)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:57)
+</pre></div></td>
+<td>0</td>
+<td>Cucumber.RunnerClass@1a968a59</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-skipped'>
+<tr><td colspan='4' align='center'><b>SKIPPED CONFIGURATIONS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='Cucumber.RunnerClass.tearDownClass()'><b>tearDownClass</b><br>Test class: Cucumber.RunnerClass</td>
 <td></td>
-<td>30</td>
+<td>0</td>
+<td>Cucumber.RunnerClass@1a968a59</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-skipped'>
+<tr><td colspan='4' align='center'><b>SKIPPED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='Cucumber.RunnerClass.feature()'><b>feature</b><br>Test class: Cucumber.RunnerClass<br>Test method: Runs Cucumber Feature</td>
+<td><div><pre>java.lang.RuntimeException: java.lang.NullPointerException
+Caused by: java.lang.NullPointerException
+	at cucumber.api.testng.AbstractTestNGCucumberTests.features(AbstractTestNGCucumberTests.java:29)
+	... 20 more
+... Removed 27 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1848125895", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1848125895'><pre>java.lang.RuntimeException: java.lang.NullPointerException
+	at org.testng.internal.MethodInvocationHelper.invokeDataProvider(MethodInvocationHelper.java:162)
+	at org.testng.internal.Parameters.handleParameters(Parameters.java:441)
+	at org.testng.internal.Invoker.handleParameters(Invoker.java:1300)
+	at org.testng.internal.Invoker.createParameters(Invoker.java:1015)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1104)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
+	at org.testng.TestRunner.privateRun(TestRunner.java:771)
+	at org.testng.TestRunner.run(TestRunner.java:621)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:357)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:352)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:310)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:259)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1199)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1124)
+	at org.testng.TestNG.run(TestNG.java:1032)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:126)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:152)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:57)
+Caused by: java.lang.NullPointerException
+	at cucumber.api.testng.AbstractTestNGCucumberTests.features(AbstractTestNGCucumberTests.java:29)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:85)
+	at org.testng.internal.MethodInvocationHelper.invokeDataProvider(MethodInvocationHelper.java:136)
+	... 20 more
+</pre></div></td>
+<td>0</td>
 <td>Cucumber.RunnerClass@1a968a59</td></tr>
 </table><p>
 </body>

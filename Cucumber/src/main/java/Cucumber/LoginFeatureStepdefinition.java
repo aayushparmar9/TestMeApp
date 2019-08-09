@@ -12,6 +12,7 @@ import org.testng.Assert;
 
 import ObjectRepository.PageObjects;
 import cucumber.api.DataTable;
+import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
@@ -37,22 +38,22 @@ public class LoginFeatureStepdefinition {
 	@When("^user enters username and password$")
 
 	public void userEntersUsernameAndPassword() throws Throwable {
+		
 
 		
 	}
 
-	@Then("user logged in successfully")
+@Then("user logged in successfully")
 	public void userLoggedInSuccessfully() throws Throwable {
 		System.out.println("User logged in successfully");
 		//Assert.assertEquals(driver.getTitle(), "Admin Home");
-        driver.quit();
+        //driver.quit();
 	}
 
 	@When("^Lalitha searches below products in the search box$")
 	public void lalithaSearchesBelowProductsInTheSearchBox(DataTable productsdata) throws Throwable {
 		List<String> productsName = productsdata.asList(String.class);
-		navigateToHomePage();
-		userEntersUsernameAndPassword();
+		
 		for (String product : productsName) {
 			driver.findElement(By.name("products")).sendKeys(product);
 
@@ -85,14 +86,16 @@ public class LoginFeatureStepdefinition {
 
 		po.signin.click();
 
-		lo.username.sendKeys(arg1);
+		lo.username.sendKeys("lalitha");
 
-		lo.password.sendKeys(arg2);
+		lo.password.sendKeys("password123");
 
 		lo.Login.click();
 
 		
 	}
+
+	
 
 	public static boolean isElementPresent(String locator) {
 
@@ -123,5 +126,38 @@ public class LoginFeatureStepdefinition {
 		return found;
 
 	}
+	@When("^User opens the cart$")
+	public void userOpensTheCart() throws Throwable {
+		driver.findElement(By.xpath("//a[@href='displayCart.htm']")).click();
+	}
+		
+	
 
-}
+	@And("^User clicks checkout button$")
+	public void userClicksCheckoutButton() throws Throwable {
+		driver.findElement(By.xpath("//a[@href='checkout.htm']")).click();
+	}
+
+	@And("^User fills address and proceeds to pay button$")
+	public void userFillsAddressAndProceedsToPayButton() throws Throwable {
+		driver.findElement(By.xpath("//input[@value='Proceed to Pay']")).click();
+	}
+		
+	
+
+	@Then("^Payment is Successful$")
+	public void paymentIsSuccessful() throws Throwable {
+		driver.findElement(By.xpath("//div[@id='swit']/div[1]/div/label/i")).click();
+		driver.findElement(By.xpath("//a[@href='#']")).click();
+				
+				
+	}
+		
+	}
+
+	
+	
+
+
+
+
